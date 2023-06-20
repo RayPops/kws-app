@@ -32,4 +32,4 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 ## License 📄
 
-This project is licensed under the MIT License. See the [LICENSE](/LICENSE) file for more information.
+This project is licensed under the GPL-3.0 license. See the [LICENSE](/LICENSE) file for more information.
