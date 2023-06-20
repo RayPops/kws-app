@@ -45,7 +45,7 @@ struct ContentView_Previews: PreviewProvider {
 
 struct ConservationView: View {
     var body: some View {
-        Text("Conservation View")
+        Text("Conservations View")
     }
 }
 
