@@ -17,7 +17,7 @@ The Park Explorer App is a mobile application designed to help users explore and
 - Swift: A powerful programming language for iOS, macOS, watchOS, and tvOS
 - iOS SDK: The software development kit for iOS devices
 
-## Getting Started 🚀
+## Getting Started 🌍
 
 To get started with the Park Explorer App, follow these steps:
 
