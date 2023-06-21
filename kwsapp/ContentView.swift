@@ -43,38 +43,6 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-//struct ConservationView: View {
-//    var body: some View {
-//        Text("Conservations View")
-//    }
-//}
-
-struct PurchaseTicketView: View {
-    var body: some View {
-        Text("Purchase Ticket View")
-    }
-}
-
-//struct ImageCarouselView: View {
-//    var body: some View {
-//        GeometryReader { geometry in
-//            ScrollView(.horizontal, showsIndicators: true) {
-//                LazyHStack(spacing: 10) {
-//                    ForEach(1..<6) { index in
-//                        Image("image\(index)")
-//                            .resizable()
-//                            .scaledToFill()
-//                            .frame(width: geometry.size.width, height: geometry.size.height)
-//                            .clipped()
-//                            .cornerRadius(10)
-//                    }
-//                }
-//                .padding(.horizontal)
-//            }
-//        }
-//    }
-//}
-
 struct ImageCarouselView: View {
     @State private var currentIndex: Int = 0
     @State private var isReversed: Bool = false
