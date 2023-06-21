@@ -15,6 +15,8 @@
 		269B0F832A4207860066113F /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269B0F822A4207860066113F /* AboutView.swift */; };
 		269B0F852A4207B70066113F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269B0F842A4207B70066113F /* HomeView.swift */; };
 		269B0F872A4221E70066113F /* ParksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269B0F862A4221E70066113F /* ParksView.swift */; };
+		26D0F6802A4324E900211BAC /* ConservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D0F67F2A4324E900211BAC /* ConservationView.swift */; };
+		26D0F6822A43324D00211BAC /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D0F6812A43324D00211BAC /* LogInView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		269B0F822A4207860066113F /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		269B0F842A4207B70066113F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		269B0F862A4221E70066113F /* ParksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParksView.swift; sourceTree = "<group>"; };
+		26D0F67F2A4324E900211BAC /* ConservationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConservationView.swift; sourceTree = "<group>"; };
+		26D0F6812A43324D00211BAC /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				269B0F722A41F6E40066113F /* ContentView.swift */,
 				269B0F862A4221E70066113F /* ParksView.swift */,
 				269B0F842A4207B70066113F /* HomeView.swift */,
+				26D0F67F2A4324E900211BAC /* ConservationView.swift */,
+				26D0F6812A43324D00211BAC /* LogInView.swift */,
 				269B0F822A4207860066113F /* AboutView.swift */,
 				269B0F742A41F6E50066113F /* Assets.xcassets */,
 				269B0F762A41F6E50066113F /* kwsapp.entitlements */,
@@ -157,6 +163,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				269B0F732A41F6E40066113F /* ContentView.swift in Sources */,
+				26D0F6822A43324D00211BAC /* LogInView.swift in Sources */,
+				26D0F6802A4324E900211BAC /* ConservationView.swift in Sources */,
 				269B0F852A4207B70066113F /* HomeView.swift in Sources */,
 				269B0F832A4207860066113F /* AboutView.swift in Sources */,
 				269B0F872A4221E70066113F /* ParksView.swift in Sources */,

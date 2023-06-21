@@ -11,7 +11,7 @@ import SwiftUI
 struct kwsappApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView() 
         }
     }
 }

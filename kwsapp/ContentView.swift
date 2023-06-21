@@ -27,10 +27,10 @@ struct ContentView: View {
                     Text("Conservation")
                 }
             
-            ScanTicketView()
+            PurchaseTicketView()
                 .tabItem {
-                    Image(systemName: "qrcode.viewfinder")
-                    Text("Scan Ticket")
+                    Image(systemName: "ticket")
+                    Text("Buy Tickets")
                 }
         }
         .accentColor(Color("TabButtonAccentColor"))
@@ -43,15 +43,15 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct ConservationView: View {
-    var body: some View {
-        Text("Conservations View")
-    }
-}
+//struct ConservationView: View {
+//    var body: some View {
+//        Text("Conservations View")
+//    }
+//}
 
-struct ScanTicketView: View {
+struct PurchaseTicketView: View {
     var body: some View {
-        Text("Scan Ticket View")
+        Text("Purchase Ticket View")
     }
 }
 
@@ -77,12 +77,13 @@ struct ScanTicketView: View {
 
 struct ImageCarouselView: View {
     @State private var currentIndex: Int = 0
+    @State private var isReversed: Bool = false
 
     var body: some View {
         GeometryReader { geometry in
             ScrollViewReader { scrollView in
                 ScrollView(.horizontal, showsIndicators: true) {
-                    LazyHStack(spacing: 10) {
+                    LazyHStack(spacing: 1) {
                         ForEach(0..<5, id: \.self) { index in
                             Image("image\(index+1)")
                                 .resizable()
@@ -92,9 +93,13 @@ struct ImageCarouselView: View {
                                 .cornerRadius(40)
                                 .id(index)
 
+                                                            
+
+
+                                
                         }
                     }
-                    .padding()
+                    //.padding()
                     .onAppear {
                         startTimer(scrollView: scrollView)
                     }
@@ -105,14 +110,18 @@ struct ImageCarouselView: View {
 
     func startTimer(scrollView: ScrollViewProxy) {
         Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { _ in
-            if currentIndex < 4 {
-                currentIndex += 1
-            } else {
-                currentIndex = 0
+            if currentIndex == 4 {
+                isReversed = true
+            } else if currentIndex == 0 {
+                isReversed = false
             }
+            
+            currentIndex = isReversed ? currentIndex - 1 : currentIndex + 1
+            
             withAnimation(.easeInOut(duration: 1.0)) {
                 scrollView.scrollTo(currentIndex, anchor: .leading)
             }
         }
     }
 }
+
