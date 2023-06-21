@@ -77,7 +77,7 @@ struct ScanTicketView: View {
 
 struct ImageCarouselView: View {
     @State private var currentIndex: Int = 0
-    
+
     var body: some View {
         GeometryReader { geometry in
             ScrollViewReader { scrollView in
@@ -91,7 +91,7 @@ struct ImageCarouselView: View {
                                 .clipped()
                                 .cornerRadius(40)
                                 .id(index)
-                                
+
                         }
                     }
                     .padding()
@@ -102,7 +102,7 @@ struct ImageCarouselView: View {
             }
         }
     }
-    
+
     func startTimer(scrollView: ScrollViewProxy) {
         Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { _ in
             if currentIndex < 4 {
@@ -116,7 +116,3 @@ struct ImageCarouselView: View {
         }
     }
 }
-
-
-
-
