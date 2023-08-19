@@ -67,14 +67,11 @@
 		269B0F6F2A41F6E40066113F /* kwsapp */ = {
 			isa = PBXGroup;
 			children = (
+				894EB6792A9154A700FE0F8A /* System */,
+				894EB6782A91549400FE0F8A /* ViewModel */,
+				894EB6772A91549000FE0F8A /* Views */,
+				894EB6762A91548B00FE0F8A /* Model */,
 				894EB6752A91513100FE0F8A /* Info.plist */,
-				269B0F702A41F6E40066113F /* kwsappApp.swift */,
-				269B0F722A41F6E40066113F /* ContentView.swift */,
-				269B0F862A4221E70066113F /* ParksView.swift */,
-				269B0F842A4207B70066113F /* HomeView.swift */,
-				26D0F67F2A4324E900211BAC /* ConservationView.swift */,
-				26D0F6812A43324D00211BAC /* LogInView.swift */,
-				269B0F822A4207860066113F /* AboutView.swift */,
 				269B0F742A41F6E50066113F /* Assets.xcassets */,
 				269B0F762A41F6E50066113F /* kwsapp.entitlements */,
 				269B0F772A41F6E50066113F /* Preview Content */,
@@ -89,6 +86,41 @@
 				269B0F782A41F6E50066113F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		894EB6762A91548B00FE0F8A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		894EB6772A91549000FE0F8A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				269B0F862A4221E70066113F /* ParksView.swift */,
+				269B0F842A4207B70066113F /* HomeView.swift */,
+				26D0F67F2A4324E900211BAC /* ConservationView.swift */,
+				26D0F6812A43324D00211BAC /* LogInView.swift */,
+				269B0F822A4207860066113F /* AboutView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		894EB6782A91549400FE0F8A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		894EB6792A9154A700FE0F8A /* System */ = {
+			isa = PBXGroup;
+			children = (
+				269B0F702A41F6E40066113F /* kwsappApp.swift */,
+				269B0F722A41F6E40066113F /* ContentView.swift */,
+			);
+			path = System;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
