@@ -19,6 +19,7 @@
 		26D0F6802A4324E900211BAC /* ConservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D0F67F2A4324E900211BAC /* ConservationView.swift */; };
 		26D0F6822A43324D00211BAC /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D0F6812A43324D00211BAC /* LogInView.swift */; };
 		894EB6742A9150E900FE0F8A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894EB6732A9150E900FE0F8A /* Launch Screen.storyboard */; };
+		89793CF12A93D1AB00DA8757 /* PurchaseTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89793CF02A93D1AB00DA8757 /* PurchaseTicketView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		26D0F6812A43324D00211BAC /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		894EB6732A9150E900FE0F8A /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		894EB6752A91513100FE0F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		89793CF02A93D1AB00DA8757 /* PurchaseTicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseTicketView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				26D0F67F2A4324E900211BAC /* ConservationView.swift */,
 				26D0F6812A43324D00211BAC /* LogInView.swift */,
 				269B0F822A4207860066113F /* AboutView.swift */,
+				89793CF02A93D1AB00DA8757 /* PurchaseTicketView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -207,7 +210,7 @@
 				26D0F6802A4324E900211BAC /* ConservationView.swift in Sources */,
 				269B0F852A4207B70066113F /* HomeView.swift in Sources */,
 				269B0F832A4207860066113F /* AboutView.swift in Sources */,
-				26B0CD892A4AFC880081088B /* PurchaseTicketView.swift in Sources */,
+				89793CF12A93D1AB00DA8757 /* PurchaseTicketView.swift in Sources */,
 				269B0F872A4221E70066113F /* ParksView.swift in Sources */,
 				269B0F712A41F6E40066113F /* kwsappApp.swift in Sources */,
 			);

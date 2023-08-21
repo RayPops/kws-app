@@ -27,23 +27,21 @@ struct ConservationView: View {
     @State private var selectedConservation: Conservation?
     
     var body: some View {
-        NavigationView {
-            ScrollView {
-                LazyVGrid(columns: createColumns(), spacing: 20) {
-                    ForEach(conservations) { conservation in
-                        ConservationTile(conservation: conservation)
-                            .onTapGesture {
-                                selectedConservation = conservation
-                            }
-                    }
-                }
-                .padding()
-                .sheet(item: $selectedConservation) { conservation in
-                    ConservationDetail(conservation: conservation)
+        ScrollView {
+            LazyVGrid(columns: createColumns(), spacing: 20) {
+                ForEach(conservations) { conservation in
+                    ConservationTile(conservation: conservation)
+                        .onTapGesture {
+                            selectedConservation = conservation
+                        }
                 }
             }
-            .navigationBarTitle("Conservation Efforts")
+            .padding()
+            .sheet(item: $selectedConservation) { conservation in
+                ConservationDetail(conservation: conservation)
+            }
         }
+        
     }
     
     private func createColumns() -> [GridItem] {

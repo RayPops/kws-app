@@ -59,12 +59,7 @@ struct ImageCarouselView: View {
                                 .frame(width: geometry.size.width, height: geometry.size.height)
                                 .clipped()
                                 .cornerRadius(40)
-                                .id(index)
-
-                                                            
-
-
-                                
+                                .id(index)                                
                         }
                     }
                     //.padding()
