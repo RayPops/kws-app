@@ -44,7 +44,7 @@ struct ParksView: View {
         
         Park(name: "Ruma National Park", location: CLLocationCoordinate2D(latitude: -0.6914, longitude: 34.2011), description: "Located in the Lambwe Valley, Ruma National Park is the only terrestrial park in Kenya's Nyanza Province. It provides a sanctuary for the endangered roan antelope and offers a diverse range of other wildlife species."),
         
-        Park(name: "Saiwa Swamp National Park", location: CLLocationCoordinate2D(latitude: 0.5489, longitude: 34.5972), description: "Saiwa Swamp National Park is Kenya's smallest national park, yet it holds a unique attraction: the Sitatunga antelope. The park's swampy habitat, replete with boardwalks and observation towers, provides a unique environment for bird watching and nature walks."),
+        Park(name: "Saiwa Swamp National Park", location: CLLocationCoordinate2D(latitude: 1.1, longitude: 35.116667), description: "Saiwa Swamp National Park is Kenya's smallest national park, yet it holds a unique attraction: the Sitatunga antelope. The park's swampy habitat, replete with boardwalks and observation towers, provides a unique environment for bird watching and nature walks."),
         Park(name: "Nairobi National Park", location: CLLocationCoordinate2D(latitude: -1.3733, longitude: 36.8065), description: "Nairobi National Park is a unique wildlife sanctuary located just outside the bustling city of Nairobi, making it the only national park situated within a capital city worldwide. Despite its proximity to urban areas, the park boasts a diverse range of wildlife, including lions, rhinos, giraffes, zebras, buffalos, and various bird species. Nairobi National Park provides visitors with a chance to spot wildlife against the backdrop of a city skyline, offering a unique safari experience."),
         Park(name: "Mount Kenya National Park", location: CLLocationCoordinate2D(latitude: 0.1521, longitude: 37.3084), description: "Mount Kenya National Park is home to the second-highest mountain peak in Africa, Mount Kenya. The park showcases a stunning alpine landscape, with rugged peaks, glaciers, and pristine mountain lakes. It offers exceptional opportunities for hiking, mountaineering, and wildlife viewing. The park is inhabited by a rich variety of wildlife, including elephants, buffalos, leopards, hyenas, and several primate species. Exploring Mount Kenya National Park provides a unique adventure for nature lovers and outdoor enthusiasts."),
         Park(name: "Hell's Gate National Park", location: CLLocationCoordinate2D(latitude: -0.9946, longitude: 36.3918), description: "Hell's Gate National Park is a remarkable geothermal area located in the Great Rift Valley. The park's unique features include towering cliffs, deep gorges, and steaming hot springs. Visitors can enjoy various activities such as hiking, cycling, and rock climbing while admiring the park's dramatic scenery. Hell's Gate is also known for its diverse wildlife, including zebras, giraffes, gazelles, baboons, and over 100 bird species."),
@@ -112,16 +112,65 @@ struct ParksView: View {
     }
 }
 
+
+
+let national_parks = ["Aberdare National Park", "Amboseli National Park", "Arabuko Sokoke National Park", "Central Island National Park", "Chyulu Hills National Park", "Hell's Gate National Park", "Kora National Park", "Lake Nakuru National Park", "Malka Mari National Park", "Maasai Mara National Park", "Meru National Park", "Mount Elgon National Park", "Mount Kenya National Park", "Mount Longonot National Park", "Nairobi National Park", "Ol Donyo Sabuk National Park", "Ruma National Park", "Saiwa Swamp National Park", "Sibiloi National Park", "Tsavo East National Park", "Tsavo West National Park"]
+let national_reserves = ["Arawale National Reserve", "Bisanadi National Reserve", "Boni National Reserve", "Buffalo Springs National Reserve", "Dodori National Reserve", "Kakamega Forest National Reserve", "Kisumu Impala Sanctuary", "Lake Bogoria National Reserve", "Mwaluganje Elephant Sanctuary", "Mwea National Reserve", "Mwingi National Reserve", "Rahole National Reserve", "Rimoi National Reserve", "Samburu National Reserve", "Shimba Hills National Reserve", "Tana River Primate Reserve", "Witu Forest Reserve (Utwani Forest Reserve)"]
+let marine_parks_and_reserves = ["Kisite-Mpunguti Marine National Park", "Kiunga Marine National Reserve", "Malindi Marine National Park", "Mombasa Marine National Park and Reserve", "Watamu Marine National Park"]
+
+let darkGreen = Color(red: 0.00, green: 0.2, blue: 0.03)
+let navyBlue = Color(red: 0/255, green: 0/255, blue: 102/255)
+
 struct MapAnnotationView: View {
     @State var isShowingDetail = false
     let park: Park
+    
+    // Determine the type of park based on its name
+    var parkType: String {
+        if national_parks.contains(park.name) {
+            return "NationalPark"
+        } else if national_reserves.contains(park.name) {
+            return "NationalReserve"
+        } else if marine_parks_and_reserves.contains(park.name) {
+            return "MarineReserve"
+        } else {
+            return "Unknown"
+        }
+    }
+    
+    // Determine the image and color based on the park type
+    var parkImage: String {
+        switch parkType {
+        case "NationalPark":
+            return "tent.circle.fill"
+        case "NationalReserve":
+            return "tree.circle.fill"
+        case "MarineReserve":
+            return "drop.circle.fill"
+        default:
+            return "figure.walk.circle.fill"
+        }
+    }
+    
+    var parkColor: Color {
+        switch parkType {
+        case "NationalPark":
+            return Color("ParkIconColor")
+        case "NationalReserve":
+            return darkGreen
+        case "MarineReserve":
+            return navyBlue
+        default:
+            return Color("ParkIconColor")
+        }
+    }
     
     var body: some View {
         Button(action: {
             self.isShowingDetail.toggle()
         }) {
-            Image(systemName: "tent.circle.fill")
-                .foregroundColor(Color("ParkIconColor"))
+            Image(systemName: parkImage)
+                .foregroundColor(parkColor)
                 .imageScale(.large)
                 .onTapGesture {
                     self.isShowingDetail = true
@@ -132,6 +181,7 @@ struct MapAnnotationView: View {
         })
     }
 }
+
 
 struct ParkDetailView: View {
     let park: Park
