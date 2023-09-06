@@ -36,7 +36,6 @@ struct HomeView: View {
                 .padding(.trailing)
             }
             
-            
             GeometryReader { geometry in
                 ZStack {
                     ImageCarouselView()
