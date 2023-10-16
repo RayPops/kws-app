@@ -30,7 +30,7 @@ struct PurchaseTicketView: View {
     var parks: [ParkTicketed] = [
         ParkTicketed(id: 0, name: "Tsavo East National Park", localPrice: 10, foreignPrice: 70),
         ParkTicketed(id: 1, name: "Watamu Marine Park", localPrice: 10, foreignPrice: 20),
-        ParkTicketed(id: 2, name: "Nairobi National Park", localPrice: 10, foreignPrice: 70)
+        ParkTicketed(id: 2, name: "Nairobi National Park", localPrice: 10, foreignPrice: 70),
         ParkTicketed(id: 3, name: "Maasai Mara National Park", localPrice: 10, foreignPrice: 70)
     ]
 
