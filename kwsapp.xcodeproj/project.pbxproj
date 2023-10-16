@@ -11,11 +11,9 @@
 		269B0F732A41F6E40066113F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269B0F722A41F6E40066113F /* ContentView.swift */; };
 		269B0F752A41F6E50066113F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 269B0F742A41F6E50066113F /* Assets.xcassets */; };
 		269B0F792A41F6E50066113F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 269B0F782A41F6E50066113F /* Preview Assets.xcassets */; };
-		269B0F812A4203E60066113F /* CenteredCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = 269B0F802A4203E60066113F /* CenteredCollectionView */; };
 		269B0F832A4207860066113F /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269B0F822A4207860066113F /* AboutView.swift */; };
 		269B0F852A4207B70066113F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269B0F842A4207B70066113F /* HomeView.swift */; };
 		269B0F872A4221E70066113F /* ParksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269B0F862A4221E70066113F /* ParksView.swift */; };
-		26B0CD892A4AFC880081088B /* PurchaseTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B0CD882A4AFC880081088B /* PurchaseTicketView.swift */; };
 		26D0F6802A4324E900211BAC /* ConservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D0F67F2A4324E900211BAC /* ConservationView.swift */; };
 		26D0F6822A43324D00211BAC /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D0F6812A43324D00211BAC /* LogInView.swift */; };
 		894EB6742A9150E900FE0F8A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894EB6732A9150E900FE0F8A /* Launch Screen.storyboard */; };
@@ -32,7 +30,6 @@
 		269B0F822A4207860066113F /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		269B0F842A4207B70066113F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		269B0F862A4221E70066113F /* ParksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParksView.swift; sourceTree = "<group>"; };
-		26B0CD882A4AFC880081088B /* PurchaseTicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseTicketView.swift; sourceTree = "<group>"; };
 		26D0F67F2A4324E900211BAC /* ConservationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConservationView.swift; sourceTree = "<group>"; };
 		26D0F6812A43324D00211BAC /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		894EB6732A9150E900FE0F8A /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -45,7 +42,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				269B0F812A4203E60066113F /* CenteredCollectionView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +141,6 @@
 			);
 			name = kwsapp;
 			packageProductDependencies = (
-				269B0F802A4203E60066113F /* CenteredCollectionView */,
 			);
 			productName = kwsapp;
 			productReference = 269B0F6D2A41F6E40066113F /* kwsapp.app */;
@@ -176,7 +171,6 @@
 			);
 			mainGroup = 269B0F642A41F6E40066113F;
 			packageReferences = (
-				269B0F7F2A4203E60066113F /* XCRemoteSwiftPackageReference "CenteredCollectionView" */,
 			);
 			productRefGroup = 269B0F6E2A41F6E40066113F /* Products */;
 			projectDirPath = "";
@@ -428,25 +422,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		269B0F7F2A4203E60066113F /* XCRemoteSwiftPackageReference "CenteredCollectionView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/BenEmdon/CenteredCollectionView";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		269B0F802A4203E60066113F /* CenteredCollectionView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 269B0F7F2A4203E60066113F /* XCRemoteSwiftPackageReference "CenteredCollectionView" */;
-			productName = CenteredCollectionView;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 269B0F652A41F6E40066113F /* Project object */;
 }
